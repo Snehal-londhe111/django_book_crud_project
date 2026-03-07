@@ -21,6 +21,9 @@
                 <th>Book Author</th>
                 <th>Book Pages</th>
                 <th>Book Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
             </tr>
         </thead>
         <tbody>
@@ -32,6 +35,18 @@
                 <td>{{i.Bookauthor}}</td>
                 <td>{{i.Bookpage}}</td>
                 <td>{{i.Bookprice}}</td>
+                <td>
+                    <form name="EditForm" action="{% url 'editview' pk=i.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" value="Edit">
+                    </form>
+                </td>
+                <td>
+                    <form name="DeleteForm" action="{% url 'delete' pk=i.id %}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
             {% endfor %}
         </tbody>

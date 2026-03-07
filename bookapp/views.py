@@ -22,3 +22,23 @@ def InsertData(request):
 def ShowData(request):
     show_book = Book.objects.all()
     return render(request, "bookapp/show.html", {'key1':show_book})
+
+def EditView(request,pk):
+    get_book = Book.objects.get(id=pk)
+    return render(request, "bookapp/edit.html",{'key2':get_book})
+
+def UpdateData(request,pk):
+    bdata = Book.objects.get(id=pk)
+
+    bdata.Bookname = request.POST['bname']
+    bdata.Bookauthor = request.POST['bauthor']
+    bdata.Bookpage = request.POST['bpage']
+    bdata.Bookprice = request.POST['bprice']
+
+    bdata.save()
+    return redirect('showdata')
+
+def DeleteData(request,pk):
+    ddata = Book.objects.get(id=pk)
+    ddata.delete()
+    return redirect('showdata')

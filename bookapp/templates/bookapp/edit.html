@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Page</title>
+</head>
+<body>
+    <fieldset>
+        <center>
+            <h1>BOOK UPDATE FORM</h1>
+            {% if key2 %}
+            <form action="{% url 'update' pk=key2.id %}" method="post">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td><b>Book Name : </b></td>
+                        <td><input type="text" name="bname" id="" value="{{key2.Bookname}}" placeholder="Enter book name"> </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Book Author :</b> </td>
+                        <td><input type="text" name="bauthor" value="{{key2.Bookauthor}}" id="" placeholder="Enter book author"> </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Book page : </b></td>
+                        <td><input type="text" name="bpage" id="" value="{{key2.Bookpage}}" placeholder="Enter book page"> </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Book Price :</b> </td>
+                        <td><input type="text" name="bprice" id="" value="{{key2.Bookprice}}" placeholder="Enter book price"> </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="submit" value="UPDATE"> </td>
+                    </tr>
+                </table>
+            </form>
+            {% endif %}
+        </center>
+    </fieldset>   
+</body>
+</html>
