@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 from .models import *
 
@@ -17,4 +17,8 @@ def InsertData(request):
                                    Bookpage = bpge,
                                    Bookprice = bpz
                                    )
-    return render(request, "bookapp/show.html")
+    return redirect('showdata')
+
+def ShowData(request):
+    show_book = Book.objects.all()
+    return render(request, "bookapp/show.html", {'key1':show_book})
