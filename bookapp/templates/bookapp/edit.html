@@ -1,14 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Page</title>
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
 </head>
 <body>
     <fieldset>
         <center>
-            <h1>BOOK UPDATE FORM</h1>
+            <h2>BOOK UPDATE FORM</h2>
             {% if key2 %}
             <form action="{% url 'update' pk=key2.id %}" method="post">
                 {% csrf_token %}

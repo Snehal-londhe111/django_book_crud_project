@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+
+h2{
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+table{
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th{
+    background-color: #3498db;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+td{
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e0f0ff;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+} 
+
+form[name="EditForm"] input[type="submit" i] {
+    background-color: #27ae60; 
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form[name="EditForm"] input[type="submit" i]:hover {
+    background-color: #067735;
+} 
+
+
+form[name="DeleteForm"] input[type="submit" i] {
+    background-color: red; 
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form[name="DeleteForm"] input[type="submit" i]:hover {
+    background-color: rgb(177, 26, 26);
+} 
