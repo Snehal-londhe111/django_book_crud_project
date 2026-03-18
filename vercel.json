@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "Book_CRUD/wsgi.py",
+      "src": "django_book_project_crud/Book_CRUD/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Book_CRUD/wsgi.py"
+      "dest": "django_book_project_crud/Book_CRUD/wsgi.py"
     }
   ]
 }
